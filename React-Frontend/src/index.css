@@ -1,0 +1,155 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 210 40% 98%;
+    --foreground: 222 47% 11%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222 47% 11%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222 47% 11%;
+
+    --primary: 210 83% 53%;
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 210 40% 96%;
+    --secondary-foreground: 222 47% 11%;
+
+    --muted: 210 40% 96%;
+    --muted-foreground: 215 16% 47%;
+
+    --accent: 210 83% 53%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 214 32% 91%;
+    --input: 214 32% 91%;
+    --ring: 222 84% 5%;
+
+    --radius: 0.75rem;
+  }
+
+  .dark {
+    --background: 222 47% 11%;
+    --foreground: 210 40% 98%;
+
+    --card: 222 47% 11%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 222 47% 11%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 210 83% 53%;
+    --primary-foreground: 222 47% 11%;
+
+    --secondary: 217 33% 17%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 217 33% 17%;
+    --muted-foreground: 215 20% 65%;
+
+    --accent: 210 83% 53%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 63% 31%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 217 33% 17%;
+    --input: 217 33% 17%;
+    --ring: 212.7 26.8% 83.9%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  
+  html {
+    @apply scroll-smooth;
+  }
+  
+  body {
+    @apply bg-background text-foreground antialiased font-sans selection:bg-guardian-blue/20 selection:text-guardian-blue;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-medium tracking-tight;
+  }
+}
+
+@layer components {
+  .glass {
+    @apply bg-white/80 dark:bg-guardian-dark/80 backdrop-blur-md border border-white/20 dark:border-white/10;
+  }
+  
+  .dark-glass {
+    @apply bg-guardian-dark/90 backdrop-blur-md border border-white/10;
+  }
+  
+  .guardian-card {
+    @apply bg-white dark:bg-guardian-dark/90 rounded-2xl shadow-medium dark:shadow-none border border-border transition-all duration-300;
+  }
+  
+  .guardian-input {
+    @apply w-full px-4 py-3 rounded-xl bg-white dark:bg-guardian-dark/50 border border-border shadow-inner-light focus:ring-2 focus:ring-guardian-blue/30 focus:border-guardian-blue/50 focus:outline-none transition duration-200;
+  }
+  
+  .guardian-button {
+    @apply px-6 py-3 rounded-xl font-medium transform transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 disabled:opacity-70 disabled:cursor-not-allowed;
+  }
+  
+  .guardian-button-primary {
+    @apply guardian-button bg-guardian-gradient hover:shadow-medium text-white hover:scale-[1.02] active:scale-[0.98] focus:ring-guardian-blue/50;
+  }
+  
+  .guardian-button-secondary {
+    @apply guardian-button bg-secondary hover:bg-secondary/80 text-foreground hover:shadow-subtle focus:ring-guardian-blue/30;
+  }
+  
+  .guardian-section {
+    @apply py-8 px-6 md:py-12 md:px-8 lg:py-16 max-w-7xl mx-auto;
+  }
+  
+  .card-hover {
+    @apply hover:shadow-medium dark:hover:bg-guardian-blue/5 transition-all duration-300;
+  }
+  
+  .text-gradient {
+    @apply bg-guardian-gradient dark:bg-guardian-dark-gradient bg-clip-text text-transparent;
+  }
+}
+
+@layer utilities {
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+  
+  .animation-delay-100 {
+    animation-delay: 100ms;
+  }
+  
+  .animation-delay-200 {
+    animation-delay: 200ms;
+  }
+  
+  .animation-delay-300 {
+    animation-delay: 300ms;
+  }
+  
+  .animation-delay-500 {
+    animation-delay: 500ms;
+  }
+}
