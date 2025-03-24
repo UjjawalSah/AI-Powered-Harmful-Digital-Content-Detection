@@ -32,7 +32,7 @@ This AI system integrates two powerful models for content classification:
 The system dynamically chooses between these models based on the complexity of the input data, ensuring optimal performance and accuracy.
 
 ## 🔗 Live Demo
-[🌍 Click here to try the live version](#) *(Replace with actual link)*
+[🌍 Click here to try the live version](https://digitalcontentdetection.vercel.app/)
 
 ## 📌 Usage
 ### Text Classification
